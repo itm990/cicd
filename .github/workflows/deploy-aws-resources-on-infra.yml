@@ -9,6 +9,9 @@ env:
 
 jobs:
   aws_cdk:
+    defaults:
+      run:
+        working-directory: infra
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,16 +32,12 @@ jobs:
 
       - name: install requirements
         run: 'pip install -r requirements.txt'
-        working-directory: infra
 
       - name: cdk diff
         run: cdk diff
-        working-directory: infra
 
       - name: cdk synth
         run: cdk synth
-        working-directory: infra
 
       - name: cdk deploy
-        run: cdk deploy
-        working-directory: infra
+        run: cdk deploy --require-approval never

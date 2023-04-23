@@ -7,10 +7,8 @@ from alb_fargate.alb_fargate_stack import AlbFargateStack
 
 
 app = cdk.App()
-AlbFargateStack(app, "InfraStack",
-
+AlbFargateStack(app, "AlbFargateStack",
     env=cdk.Environment(account=os.getenv('CDK_DEFAULT_ACCOUNT'), region=os.getenv('CDK_DEFAULT_REGION')),
-
-    )
+)
 
 app.synth()

@@ -1,5 +1,3 @@
-import os
-
 from aws_cdk import (
     Stack,
     aws_ec2 as ec2,
@@ -18,8 +16,8 @@ class AlbFargateStack(Stack):
 
         cluster = ecs.Cluster(self, "Cluster", vpc=vpc)
 
-        asset = ecr_assets.DockerImageAsset(self, "pettogram",
-            directory=os.path.join(os.getcwd(), "../app")
+        asset = ecr_assets.DockerImageAsset(self, "petgram",
+            directory="../app"
         )
 
         ecs_patterns.ApplicationLoadBalancedFargateService(self, "Service",
