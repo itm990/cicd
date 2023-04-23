@@ -40,5 +40,5 @@ jobs:
         working-directory: infra
 
       - name: cdk deploy
-        run: cdk deploy
+        run: cdk deploy --require-approval never
         working-directory: infra
