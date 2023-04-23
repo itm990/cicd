@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          ls
+          INPUT_WORKING_DIR=infra
           echo "github workspace $GITHUB_WORKSPACE"
           echo "input working dir $INPUT_WORKING_DIR"
 
