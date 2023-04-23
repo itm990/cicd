@@ -13,8 +13,8 @@ jobs:
     steps:
       - run: |
           ls
-          echo $GITHUB_WORKSPACE
-          echo $INPUT_WORKING_DIR
+          echo "github workspace $GITHUB_WORKSPACE"
+          echo "input working dir $INPUT_WORKING_DIR"
 
       - name: cdk diff
         uses: youyo/aws-cdk-github-actions@v2
