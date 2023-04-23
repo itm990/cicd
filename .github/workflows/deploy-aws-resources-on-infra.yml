@@ -24,20 +24,20 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: install npm
-        run: 'sudo apt update -y && sudo apt install nodejs npm -y'
+      # - name: install npm
+      #   run: 'sudo apt update -y && sudo apt install nodejs npm -y'
 
-      - name: install aws cdk
-        run: 'sudo npm install -g aws-cdk'
+      # - name: install aws cdk
+      #   run: 'sudo npm install -g aws-cdk'
 
-      - name: install requirements
-        run: 'pip install -r requirements.txt'
+      # - name: install requirements
+      #   run: 'pip install -r requirements.txt'
 
-      - name: cdk diff
-        run: cdk diff
+      # - name: cdk diff
+      #   run: cdk diff
 
-      - name: cdk synth
-        run: cdk synth
+      # - name: cdk synth
+      #   run: cdk synth
 
-      - name: cdk deploy
-        run: cdk deploy --require-approval never
+      # - name: cdk deploy
+      #   run: cdk deploy --require-approval never
